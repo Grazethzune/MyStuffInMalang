@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: #002480;
+    padding-left: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#Home, #Statistik, #Barang-temuan, #Kontak {
+    scroll-margin-top: 80px; 
+}
+
+nav{
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li{
+    height: 70px;
+}
+
+nav a{
+    text-decoration: none;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.home-container{
+    min-height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home-container .deskripsi-container{
+    background: linear-gradient(270deg, #002480, #00071A);
+    opacity: 80%;
+    color: white;
+    padding: 60px;
+    font-family: sans-serif;
+}
+
+.deskripsi-container h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.deskripsi-container p {
+    font-size: 1.5rem;
+}
+
+.statistik-container{
+    font-family: sans-serif;
+    margin: 50px 0;
+}
+
+.statistik-container h2, .barang-temuan-container h2, footer .kontak h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 20px;
+}
+
+.name {
+    margin: 10px 0;
+}
+
+.name p{
+    font-size: 1.4rem;
+}
+
+.image-and-location, .image-and-time, .desc{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.image-and-location p, .image-and-time p, .desc p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+    padding-left: 5px;
+}
+
+.data-container{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    justify-content: space-around;
+    height: 180px;
+}
+
+.data-container .data{
+    text-align: center;
+    margin: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.barang-temuan-container{
+    margin: 50px 0 5px 0;
+}
+
+.konten-barang-temuan{
+    margin: 20px 0;
+    font-weight:bold;
+    font-size: 1.2rem;
+}
+
+.barang-temuan-content #Barang-Ditemukan{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #1e57e8;
+    border-color: #1e57e8;
+    color: #fff;
+    transition: background 0.5s;
+    transition: color 0.5s;
+    border: 1px solid;
+}
+
+.barang-temuan-content #Barang-Hilang{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    border-color: #1e57e8;
+    color: #1e57e8;
+    transition: background 0.5s;
+    transition: color 0.5s;
+    border: 1px solid;
+}
+
+.barang-temuan-content{
+    display: flex;
+    margin: 20px 40px;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#data-barang-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.barang-temuan-content .data{
+    width: 23%;
+    display: flex;
+    margin: 1% 1%;
+    background-color: #F6F6F6;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.barang-temuan-content .data:hover{
+    transform:translateY(-10px);
+}
+
+.lokasi-tanggal{
+    margin: 20px;
+}
+
+.barang-temuan-content .data .btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.barang-temuan-content .data button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    border-color: #1e57e8;
+    color: #1e57e8;
+    transition: background 0.5s;
+    transition: color 0.5s;
+    border: 1px solid;
+}
+
+.barang-temuan-content .data button:hover{
+    background-color: #1e57e8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.barang-temuan-content .data img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.ajukan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002480;
+}
+
+.ajukan .ajukan-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.ajukan-konten h2{
+    color: white;
+    text-align: center;
+}
+
+.ajukan-konten p {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.login-btn{
+    margin: 25px;
+}
+
+.login-btn button{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    border-color: #1e57e8;
+    color: #1e57e8;
+    border: 1px solid;
+    transition: background 0.5s;
+    transition: color 0.5s;
+}
+
+.login-btn button:hover{
+    background-color: #1e57e8;;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: #C0C0C0;
+    opacity: 90%;
+    padding: 0 30px;
+}
+
+footer .hubungi{
+    padding: 0 0 20px 0;
+}
+
+footer .hubungi .nomor{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer .hubungi p{
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+footer .hubungi .nomor a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    margin-left: 10px;
+}
+
+.hiden{
+    opacity: 0;
+    transition:  all 4.5s;
+}
+
+.slide-horizontal{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition:  all 1.5s;
+}
+
+.slide-vertical{
+    opacity: 0;
+    transform: translateY(-50%);
+    transition:  all 1.5s;
+}
+
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) translateX(0);
+}
+
+.input{
+    margin: 0 40px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"], input[type="date"]{
+    font-size:18px;
+}
+
+.search{
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+.search .search_input{
+    width: 70%;
+    height: 96%;
+    border: 1px solid #1e57e8;
+    padding: 0 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search .tanggal{
+    width: 22%;
+    height: 96%;
+    border: 1px solid #1e57e8;
+    padding: 0 10px;
+}
+
+.search .search-btn{
+    width: 8%;
+    height: 100%;
+    background-image: url("images/search.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #1e57e8;
+    background-color: #1e57e8;
+    border-top-right-radius: 5px;
+    border-end-end-radius: 5px;
+    cursor: pointer;
+}
+
+.search .search-btn:hover{
+    border: 1px solid #104bdf;
+    background-color: #104bdf;
+}
+
+.input  .find-btn{
+    width: 15%;
+    border: 1px solid #1e57e8;
+    color: #1e57e8;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 100%;
+}
+
+.input  .find-btn:hover{
+    color: white;
+    background-color: #1e57e8;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+#popup-form {
+    display: none;
+    position: fixed;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#product-form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#product-form input, #product-form textarea{
+    margin: 0 0 5% 0;
+}
+
+#product-form .btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+#product-form .btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+#product-form .btn button{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    border-color: #1e57e8;
+    color: #1e57e8;
+    border: 1px solid;
+    transition: background 0.5s;
+    transition: color 0.5s;
+}
+
+#product-form .btn button:hover{
+    background-color: #1e57e8;;
+    color: #fff;
+    cursor: pointer;
+}
+.inter-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-btn{
+    display: flex;
+    width: 40%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

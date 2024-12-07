@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStuff in Malang</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <!--Navigasi--> 
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/MyStuff in Malang.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Statistik">Statistik</a></li>
+                <li><a href="#Barang-temuan">Barang Temuan</a></li>
+                <li><a href="#Kontak">Kontak</a></li>
+            </ul>
+        </nav>    
+    </header>
+
+    <!--Home-->
+    <div class="home-container" id="Home">
+        <div class="slide-horizontal">
+            <main class="deskripsi-container">
+                <h1>Kehilangan dan <br/>Menemukan Barang <br>jadi mudah!</h1>
+                <p>Hemat waktu sembari Anda <br>menyelamatkan hari dengan sistem kami <br>yang mudah digunakan untuk mengelola <br>barang hilang dan ditemukan!</p>
+            </main>
+        </div>
+    </div>
+
+    <!--Statistik-->
+    <div class="statistik-container" id="Statistik">
+        <div class="slide-vertical">
+            <h2>Statistik</h2> 
+            <div class="data-container">
+                <div class="data">
+                    <h1 id="barang-hilang">Total Barang Hilang <br><br>
+                    -</h1>
+                </div>
+                <div class="data">
+                    <h1 id="barang-ditemukan">Total Barang Ditemukan <br><br>
+                    -</h1>
+                </div>        
+                <div class="data">
+                    <h1 id="barang-kembali">Total Barang Kembali <br><br>
+                    -</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Barang Temuan-->
+    <div class="barang-temuan-container" id="Barang-temuan">
+        <div class="slide-vertical">
+            <h2>Barang Temuan</h2> 
+            <div class="input">
+                <div class="search">
+                    <input class="search_input" id="cari-product" type="text" placeholder="Nama barang">
+                    <input class="tanggal" id="date-product" type="date" placeholder="Tanggal">
+                    <button class="search-btn" onclick="findData('cari-product', 'date-product')"></button>
+                </div>
+                <button class="find-btn" id="open-popup">Menemukan Barang?</button>
+            </div>
+        </div>
+        <div id="popup-overlay"></div>
+        <div id="popup-form">
+            <form id="product-form">
+                <label for="nama-barang">Nama Barang:</label>
+                <input type="text" id="nama-barang" placeholder="Masukkan nama barang yang ditemukan" required>
+                <label for="gambarInput">Upload Gambar:</label><br>
+                <input type="file" id="gambarInput" name="gambar" accept="image/*" required>
+                <label for="deskripsi-barang">Deskripsi:</label>
+                <textarea type="text" id="deskripsi-barang" rows="6" placeholder="Deskripsikan barang yang anda temukan" required></textarea>
+                <label for="lokasi-ditemukan" id="label-lokasi">Lokasi ditemukan:</label>
+                <input type="text" id="lokasi-ditemukan" placeholder="Masukkan lokasi dimana barang ini ditemukan" required>
+                <div class="btn">
+                    <button type="submit" id="submit-btn">Tambah Barang</button>
+                    <button type="button" id="close-popup">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="slide-horizontal">
+            <div class="barang-temuan-content">
+                <div class="btn">
+                    <button id="Barang-Ditemukan" onclick="kategori('Barang Temuan')">Barang Temuan</button>
+                    <button id="Barang-Hilang" onclick="kategori('Barang Hilang')">Barang Hilang</button>
+                </div>
+                <div class="konten-barang-temuan">
+                   
+                    <p>Barang Temuan Hari ini</p>
+                </div>
+                <div id="data-barang-container"></div>
+            </div>
+        </div>
+
+        <div class="ajukan">
+            <div class="ajukan-container">
+                <div class="slide-horizontal">
+                    <div class="ajukan-konten">
+                        <h2>Menemukan Barang?</h2>
+                        <p>Ajukan Sekarang !</p>
+                    </div>
+                </div>   
+                <div class="hiden">
+                    <div class="login-btn">
+                        <button>Login Sekarang</button>
+                    </div> 
+                </div>        
+            </div>
+        </div>
+    </div>
+
+    <!--Kontak-->
+    <footer id="Kontak">
+        <div class="kontak">
+            <h2>Kontak</h2>
+        </div>
+        <div class="hubungi">
+            <p>Hubungi</p>
+            <div class="nomor">
+                <img src="images/WhatsApp.png" alt="">
+                <a href="">Nomor WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+</body>    
+</html>
